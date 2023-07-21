@@ -1,0 +1,44 @@
+// 토스트 색상
+$color_msg : #666;
+$color_success : #49d662;
+$color_error : #ff355a;
+$color_info : #2e86e8;
+$color_warning : #ffbb00ff;
+
+// 토스트(메시지 창) Toast 관련 시작 
+
+.toast_msg_box {display: block; width: calc(100vw - 20px); min-width: 200px; max-width: 320px; height: auto; margin: 0; padding: 16px;
+    // padding: 16px 16px 16px (16px * 4 + 20);
+     border-left: 8px solid $color_msg; background-color: #fff; position: relative; box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.1); transition: all 0.3s ease;
+ 
+    &:before {content: 'Message'; display: block; width: 100%; height: auto; line-height: 1; margin: 0; padding: 0; color: #222; font-size: 16px; font-weight: bold; padding-bottom: 8px; border-bottom: 1px solid #fff;}
+    &:after {content: ''; display: none; width: 40px; height: 40px; margin: 0; padding: 0; background-color: $color_msg; border-radius: 50%; position: absolute; left: 16px; top: 50%; transform: translate(0, -50%);
+    }
+  
+    &.success {border-left-color: $color_success;
+      &:before {content: 'Success';}
+      &:after {background-color: $color_success;}
+    }
+    &.error {border-left-color: $color_error;
+      &:before {content: 'Error';}
+      &:after {background-color: $color_error;}
+    }
+    &.info {border-left-color: $color_info;
+      &:before {content: 'Info';}
+      &:after {background-color: $color_info;}
+    }
+    &.warning{border-left-color: $color_warning;
+      &:before {content: 'Warning';}
+      &:after {background-color: $color_warning;}
+    }
+  
+    .toast_msg_box_close {display: block; width: 20px; height: 20px; line-height: 20px; margin: 0; padding: 0; background-color: transparent; position: absolute; top: 16px; right: 16px;}
+    .toast_msg {display: block; width: 100%; height: auto; margin: 0; padding: 0; color: #666; font-size: 16px; font-weight: 400; white-space: normal; word-wrap: break-word; word-break: break-all;}
+
+
+    @media screen and (max-width:800px) {
+        padding: 8px;
+        &:before {font-size: 12px;}
+        .toast_msg {font-size: 14px;}
+    }
+}

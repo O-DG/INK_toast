@@ -1,0 +1,131 @@
+.toast_msg_box {
+  display: block;
+  width: calc(100vw - 20px);
+  min-width: 200px;
+  max-width: 320px;
+  height: auto;
+  margin: 0;
+  padding: 16px;
+  border-left: 8px solid #666;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 5px 10px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.toast_msg_box:before {
+  content: 'Message';
+  display: block;
+  width: 100%;
+  height: auto;
+  line-height: 1;
+  margin: 0;
+  padding: 0;
+  color: #222;
+  font-size: 16px;
+  font-weight: bold;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #fff;
+}
+
+.toast_msg_box:after {
+  content: '';
+  display: none;
+  width: 40px;
+  height: 40px;
+  margin: 0;
+  padding: 0;
+  background-color: #666;
+  border-radius: 50%;
+  position: absolute;
+  left: 16px;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.toast_msg_box.success {
+  border-left-color: #49d662;
+}
+
+.toast_msg_box.success:before {
+  content: 'Success';
+}
+
+.toast_msg_box.success:after {
+  background-color: #49d662;
+}
+
+.toast_msg_box.error {
+  border-left-color: #ff355a;
+}
+
+.toast_msg_box.error:before {
+  content: 'Error';
+}
+
+.toast_msg_box.error:after {
+  background-color: #ff355a;
+}
+
+.toast_msg_box.info {
+  border-left-color: #2e86e8;
+}
+
+.toast_msg_box.info:before {
+  content: 'Info';
+}
+
+.toast_msg_box.info:after {
+  background-color: #2e86e8;
+}
+
+.toast_msg_box.warning {
+  border-left-color: #ffbb00ff;
+}
+
+.toast_msg_box.warning:before {
+  content: 'Warning';
+}
+
+.toast_msg_box.warning:after {
+  background-color: #ffbb00ff;
+}
+
+.toast_msg_box .toast_msg_box_close {
+  display: block;
+  width: 20px;
+  height: 20px;
+  line-height: 20px;
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
+  position: absolute;
+  top: 16px;
+  right: 16px;
+}
+
+.toast_msg_box .toast_msg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0;
+  padding: 0;
+  color: #666;
+  font-size: 16px;
+  font-weight: 400;
+  white-space: normal;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+@media screen and (max-width: 800px) {
+  .toast_msg_box {
+    padding: 8px;
+  }
+  .toast_msg_box:before {
+    font-size: 12px;
+  }
+  .toast_msg_box .toast_msg {
+    font-size: 14px;
+  }
+}
