@@ -31,7 +31,7 @@
     i_toast("error", "Error msg");
 ```
 
-더 많은 정보는 <a href="http://ink.pe.kr/">http://ink.pe.kr/</a>에서 확인할 수 있습니다.
+더 많은 정보는 <a href="http://ink.pe.kr/ink_guide">http://ink.pe.kr/</a>에서 확인할 수 있습니다.
 
 ## 라이선스
 모두가 원하는대로 무엇이든 할 수 있습니다.
